@@ -1,0 +1,99 @@
+/* App.css */
+
+/* Container Styles */
+.register-container {
+    background-color: #f1f1f1; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 30px; /* Padding inside the form */
+    max-width: 400px; /* Max width for the form */
+    margin: 50px auto; /* Center the form on the page */
+    text-align: center; /* Center text */
+    animation: fadeIn 0.5s ease; /* Fade-in animation */
+}
+
+/* Title Styles */
+.register-container h1 {
+    color: #2980b9; /* Blue color for the title */
+    margin-bottom: 20px; /* Space below the title */
+    animation: slideDown 0.5s ease; /* Slide-down animation */
+}
+
+/* Input Styles */
+.register-input {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside inputs */
+    margin: 10px 0; /* Space between inputs */
+    border: 2px solid #3498db; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color and box-shadow */
+    animation: slideUp 0.5s ease; /* Slide-up animation */
+}
+
+/* Input Focus Effect */
+.register-input:focus {
+    border-color: #2980b9; /* Darker blue on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); /* Add a subtle glow on focus */
+}
+
+/* Button Styles */
+.register-button {
+    background-color: #3498db; /* Button color */
+    color: #ffffff; /* White text */
+    padding: 10px 20px; /* Padding inside button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover */
+    animation: fadeIn 0.5s ease 0.3s forwards; /* Fade-in animation with delay */
+    opacity: 0; /* Initially hide the button */
+}
+
+/* Button Hover Effect */
+.register-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

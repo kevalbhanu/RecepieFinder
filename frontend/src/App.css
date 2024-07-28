@@ -1,0 +1,208 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.recipe-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+}
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+
+  .recipe-card {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-card {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8; /* Light background for contrast */
+  margin: 0;
+  padding: 0;
+  color: #2c3e50; /* Darker text color for better readability */
+}
+
+/* Recipe List Styles */
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px; /* Space between cards */
+}
+
+/* Recipe Card Styles */
+.recipe-card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 16px; /* More rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  overflow: hidden;
+  position: relative; /* For pseudo-element positioning */
+  width: 280px; /* Slightly wider cards */
+  animation: cardEntry 0.8s ease-in-out both; /* Animation for card entry */
+}
+
+/* Card Entry Animation */
+@keyframes cardEntry {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Hover Effect */
+.recipe-card:hover {
+  transform: translateY(-10px); /* More pronounced hover effect */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Recipe Image Styles */
+.recipe-card img {
+  width: 100%;
+  height: 200px; /* Taller images */
+  object-fit: cover;
+  border-top-left-radius: 16px; /* Match card border radius */
+  border-top-right-radius: 16px; /* Match card border radius */
+  transition: transform 0.5s; /* Smooth transition for image zoom */
+}
+
+/* Image Zoom Effect on Hover */
+.recipe-card:hover img {
+  transform: scale(1.1); /* Zoom effect */
+}
+
+/* Recipe Title Styles */
+.recipe-card h2 {
+  font-size: 1.6em;
+  margin: 15px 10px 5px 10px; /* More spacing around title */
+  color: #2c3e50; /* Darker color for the title */
+  font-weight: bold; /* Bold title */
+  position: relative;
+  z-index: 1; /* Ensure it's above the gradient */
+}
+
+/* Recipe Description Styles */
+.recipe-card p {
+  font-size: 1em; /* Slightly larger font size */
+  margin: 0 10px 15px 10px; /* More spacing around description */
+  color: #34495e; /* Slightly lighter color for description */
+  line-height: 1.5; /* Better line spacing */
+  position: relative;
+  z-index: 1; /* Ensure it's above the gradient */
+}
+
+/* Colorful Background for Cards */
+.recipe-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffcc00, #ff6699); /* Gradient background */
+  opacity: 0.2; /* Semi-transparent */
+  z-index: 0; /* Behind card content */
+  border-radius: 16px; /* Match card border radius */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipe-list {
+      justify-content: space-around;
+  }
+
+  .recipe-card {
+      width: 90%;
+      margin: 10px 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .recipe-card {
+      width: 45%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .recipe-card {
+      width: 280px; /* Fixed width for consistency */
+  }
+}
